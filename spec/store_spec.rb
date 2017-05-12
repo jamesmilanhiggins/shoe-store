@@ -7,4 +7,8 @@ describe(Store) do
     store = Store.new({name: "" })
     expect(store.save).to eq false
   end
+  it ("capitalizes the first letter of the store name") do
+    store = Store.create({name: "james"})
+    expect(store.name).to eq "James"
+  end
 end
