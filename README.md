@@ -34,10 +34,6 @@ Bundler
 * _Run $bundle_
 * _Run $ruby app.rb_
 * _Type localhost:4567 in a browser window to view application_
-* _If you would like to make changes, open files in text editor of your choice_
-* _Make changes as desired_
-* _Make frequent commits with detailed comments_
-
 
 ## Database Setup Instructions
 

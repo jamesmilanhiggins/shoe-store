@@ -6,10 +6,10 @@ describe(Brand) do
     brand = Brand.new({name: "" })
     expect(brand.save).to eq false
   end
-  it ("capitalizes the first letter of the brand name") do
-    brand = Brand.create({name: "nike"})
-    expect(brand.name).to eq "Nike"
-  end
+  # it ("capitalizes the first letter of the brand name") do
+  #   brand = Brand.create({name: "nike"})
+  #   expect(brand.name).to eq "Nike"
+  # end
   it ("validates the length of the brand name") do
     brand = Brand.create({name: "J" * 200})
     expect(brand.save).to eq false
@@ -22,10 +22,10 @@ describe(Brand) do
 
 
 
-
-  # it ("changes number of a price to a currency") do
-  #   brand = Brand.new({price: "10" })
-  #   brand.save
-  #   expect(brand.price).to eq "$10.00"
+  # describe "#change_price_to_currency" do
+  #   it ("changes number of a price to a currency") do
+  #     brand = Brand.create({name: "james", price: 10.45 })
+  #     expect(brand.change_price_to_currency(brand.price)).to eq "$10.45"
+  #   end
   # end
 end
