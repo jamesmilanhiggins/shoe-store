@@ -1,11 +1,27 @@
 require "spec_helper"
 
-# describe("the phrase parser path", {:type => :feature}) do
-#   it("processes the user input and returns correct message if its a palindrome") do
-#     visit("/")
-#     fill_in("phrase1", :with => "madam")
-#     fill_in("phrase2", :with => "anagram")
-#     click_button("what am i?")
-#     expect(page).to have_content("'madam' is a palindrome")
-#   end
-# end
+
+describe("visit the home page", {:type => :feature}) do
+  it("tests home page") do
+    visit("/")
+    expect(page).to have_content("Welcome")
+  end
+end
+
+describe("visit the stores page via the homepage", {:type => :feature}) do
+  it("gets to the store page") do
+    visit("/")
+    click_link("Stores")
+    expect(page).to have_content("Add Store")
+  end
+end
+describe("the store creation path", {:type => :feature}) do
+  it("creates a store") do
+    visit("/")
+    click_link("Stores")
+    expect(page).to have_content("Add Store")
+    fill_in("name", with: "James")
+    click_button("Add Store")
+    expect(page).to have_content("James")
+  end
+end
