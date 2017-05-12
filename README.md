@@ -1,6 +1,6 @@
 # _The Shoe Store Program_
 
-#### _A web application to allow users to keep track of shoe brands and the stores they are sold in.   May 11, 2017_
+#### _A web application to allow users to keep track of shoe brands and the stores they are sold in.   May 12, 2017_
 
 #### By _**James Higgins**_
 
