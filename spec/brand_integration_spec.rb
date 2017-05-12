@@ -15,13 +15,13 @@ describe("visit the brands page via the homepage", {:type => :feature}) do
     expect(page).to have_content("Add Brand")
   end
 end
-describe("the store creation path", {:type => :feature}) do
-  it("creates a store") do
+describe("the brand creation path", {:type => :feature}) do
+  it("creates a brand") do
     visit("/")
-    click_link("Stores")
-    expect(page).to have_content("Add Store")
-    fill_in("name", with: "James")
-    click_button("Add Store")
-    expect(page).to have_content("James")
+    click_link("Brand")
+    expect(page).to have_content("Add Brand")
+    fill_in("name", with: "Nike")
+    click_button("Add Brand")
+    expect(page).to have_content("Nike")
   end
 end

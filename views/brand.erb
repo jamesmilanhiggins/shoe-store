@@ -1,2 +1,10 @@
 <h1> <%= @brand.name %> </h1>
 <h1> <%= @brand.price %> </h1>
+
+<!-- Delete this brand -->
+<h1>Delete <%= @brand.name %></h1>
+
+<form action="/brands/<%= @brand.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button class="btn btn-danger" type="submit">Delete this Brand</button>
+</form>

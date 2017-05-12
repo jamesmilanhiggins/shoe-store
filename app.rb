@@ -24,6 +24,12 @@ get "/stores/:id" do
   erb :store
 end
 
+delete "/stores/:id" do
+  store_id = params["id"].to_i
+  store = Store.find(store_id)
+  store.destroy
+  redirect "/stores"
+end
 # patch ""
 
 # delete "/stores/:id" do
@@ -52,4 +58,11 @@ get "/brands/:id" do
   id = params["id"].to_i
   @brand = Brand.find(id)
   erb :brand
+end
+
+delete "/brands/:id" do
+  brand_id = params["id"].to_i
+  brand = Brand.find(brand_id)
+  brand.destroy
+  redirect "/brands"
 end
