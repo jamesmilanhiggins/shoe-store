@@ -1,0 +1,38 @@
+
+<% if @sorted_stores == [] %>
+
+<p>There are currently no stores saved</p>
+
+<% else %>
+
+<h1>Your Stores</h1>
+
+<table class="table">
+     <thead>
+       <tr>
+         <th>Store</th>
+         <th>Name</th>
+       </tr>
+     </thead>
+     <tbody>
+       <% @sorted_stores.each do |store| %>
+
+         <tr>
+           <td><a href="/stores/<%= store.id() %>"><%= store.name() %></a></td>
+           <td><%= store.name() %></td>
+         </tr>
+
+       <% end %>
+     </tbody>
+   </table>
+
+<% end %>
+
+<hr>
+<h1>Add a Store</h1>
+
+<form action="stores" method="post">
+  <label for="name">Store Name:</label>
+  <input type="text" name="name">
+  <button class="btn btn-default" type="submit">Add Store</button>
+</form>
