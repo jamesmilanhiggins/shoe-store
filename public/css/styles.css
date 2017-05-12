@@ -1,16 +1,13 @@
-/*body {
-  background-image: url('../img/shoe.jpg');
-
-text-decoration-color: red;
-}
 
 .navbar {
   /*background-image: url('../img/shoe.jpg');*/
-  /*background-position: center;
-  min-height: 280px;
+  background-position: center;
+  /*opacity: .1;*/
+  min-height: 200px;
+  color: white
 }
 .nav-text {
-  font-size: 2em;
   color: white;
-  text-decoration-color: white;
-/*}*/
+  font-size: 2em;
+
+}

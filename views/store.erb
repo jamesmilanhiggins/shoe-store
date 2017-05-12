@@ -10,14 +10,9 @@
 </ul>
 <br>
 
-
-<!-- Add Brands to this Store -->
 <h1>Add Brands to <%= @store.name %></h1>
-
 <form action="/stores/<%= @store.id %>" method="post">
-
   <input type="hidden" name="store_id" value="<%= @store.id() %>">
-
   <label for="brands">Select Brands:</label>
   <select name="brand_id">
     <option value=""></option>
@@ -28,8 +23,8 @@
   <button class="btn btn-default" type="submit">Add</button>
 </form>
 <hr>
-<h1>Update This Store</h1>
 
+<h1>Update This Store</h1>
 <form action="/stores/<%= @store.id %>" method="post">
   <input type="hidden" name="_method" value="patch">
   <label for="name">New Store Name</label>
@@ -38,7 +33,6 @@
 </form>
 
 <h1>Delete <%= @store.name %></h1>
-
 <form action="/stores/<%= @store.id %>" method="post">
   <input type="hidden" name="_method" value="delete">
   <button class="btn btn-danger" type="submit">Delete this Store</button>

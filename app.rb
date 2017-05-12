@@ -53,7 +53,6 @@ post "/stores/:id" do
   redirect "/stores/#{store_id}"
 end
 
-
 ##Brand Section
 get "/brands" do
   @brands = Brand.all

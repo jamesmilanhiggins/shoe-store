@@ -1,12 +1,7 @@
-
 <% if @stores == [] %>
-
 <p>There are currently no stores saved</p>
-
 <% else %>
-
 <h1>Your Stores</h1>
-
 <table class="table">
  <thead>
    <tr>
@@ -21,14 +16,11 @@
    <% end %>
    </tbody>
  </table>
-
 <% end %>
-
 <hr>
 <h1>Add a Store</h1>
-
 <form action="stores" method="post">
   <label for="name">Store Name:</label>
   <input type="text" name="name">
-  <button class="btn btn-default" type="submit">Add Store</button>
+  <button class="btn btn-success" type="submit">Add Store</button>
 </form>

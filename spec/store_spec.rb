@@ -21,5 +21,4 @@ describe(Store) do
     store2 = Store.create({name: "james"})
     expect(store2.save).to eq false
   end
-
 end
