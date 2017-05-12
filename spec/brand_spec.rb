@@ -2,5 +2,9 @@ require "spec_helper"
 
 describe(Brand) do
   it { should have_and_belong_to_many(:stores) }
-  # it { should validate_numericality_of(:rating) }
+  it ("validates presence of a name") do
+    brand = Brand.new({name: "" })
+    expect(brand.save).to eq false
+  end
+
 end
