@@ -54,16 +54,7 @@ post "/stores/:id" do
 end
 
 
-# delete "/stores/:id" do
-#   store_id = params["id"].to_i
-#   store = Store.find(store_id)
-#   store.destroy
-#   redirect "/stores"
-# end
-
-
 ##Brand Section
-
 get "/brands" do
   @brands = Brand.all
   erb :brands
@@ -71,7 +62,7 @@ end
 
 post "/brands" do
   name = params["name"]
-  price = params["price"].to_i
+  price = params["price"]
   @brand = Brand.create({name: name, price: price})
   if @brand.save
     redirect "/brands"

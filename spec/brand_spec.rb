@@ -22,10 +22,10 @@ describe(Brand) do
 
 
 
-  # describe "#change_price_to_currency" do
-  #   it ("changes number of a price to a currency") do
-  #     brand = Brand.create({name: "james", price: 10.45 })
-  #     expect(brand.change_price_to_currency(brand.price)).to eq "$10.45"
-  #   end
-  # end
+  describe "#change_price_to_currency" do
+    it ("changes number of a price to a currency") do
+      brand = Brand.create({name: "james", price: 10 })
+      expect(brand.change_price_to_currency(brand.price)).to eq "10.00"
+    end
+  end
 end

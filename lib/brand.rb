@@ -3,9 +3,18 @@ class Brand < ActiveRecord::Base
   validates(:name, presence: true, uniqueness: true, length: { maximum: 100})
   validates(:price, numericality: true , presence: true)
 
-  # validates(:price, :numericality => true, :format => { :with => ^\$?[0-9]{1,3}(?:,?[0-9]{3})*(?:\.[0-9]{2})?$ })
-
   before_save(:capitalize_name)
+
+
+  def change_price_to_currency(price)
+   sprintf('%.2f', price)
+  end
+
+  def capitalize_name
+    self.name.capitalize!
+  end
+end
+
   # before_save(:change_price_to_currency)
 
 # def change_price_to_currency
@@ -14,14 +23,14 @@ class Brand < ActiveRecord::Base
 # def number_to_currency
 #
 
+# validates(:price, :numericality => true, :format => { :with => ^\$?[0-9]{1,3}(?:,?[0-9]{3})*(?:\.[0-9]{2})?$ })
 # end
   # def change_price_to_currency(price)
   #   sprintf('%.2f', price)
   # end
+  #
+  # private
 
-  private
-
-    def capitalize_name
-      self.name.capitalize!
-    end
-end
+  # define_method(:monify) do
+  #   self.price = self.price.to_f.round(2)
+  # end

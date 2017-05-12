@@ -1,7 +1,6 @@
 <h1> Name of this brand:<%= @brand.name %> </h1>
-<h1> Price of this brand:<%= @brand.price %> </h1>
-
-
+<h1> Price of this brand: $ <%= @brand.change_price_to_currency(@brand.price) %> </h1>
+<!-- <h1> Price of this brand: $.00 </h1> -->
 
 <h1>Update This Brand</h1>
 
@@ -12,10 +11,7 @@
   <button type="submit" class="btn btn-success">Update Brand Name</button>
 </form>
 
-
-<!-- Delete this brand -->
 <h1>Delete <%= @brand.name %></h1>
-
 <form action="/brands/<%= @brand.id %>" method="post">
   <input type="hidden" name="_method" value="delete">
   <button class="btn btn-danger" type="submit">Delete this Brand</button>
