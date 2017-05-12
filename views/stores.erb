@@ -1,5 +1,5 @@
 
-<% if @sorted_stores == [] %>
+<% if @stores == [] %>
 
 <p>There are currently no stores saved</p>
 
@@ -8,23 +8,19 @@
 <h1>Your Stores</h1>
 
 <table class="table">
-     <thead>
-       <tr>
-         <th>Store</th>
-         <th>Name</th>
-       </tr>
-     </thead>
-     <tbody>
-       <% @sorted_stores.each do |store| %>
-
-         <tr>
-           <td><a href="/stores/<%= store.id() %>"><%= store.name() %></a></td>
-           <td><%= store.name() %></td>
-         </tr>
-
-       <% end %>
-     </tbody>
-   </table>
+ <thead>
+   <tr>
+     <th>Store Name</th>
+   </tr>
+ </thead>
+ <tbody>
+   <% @stores.each do |store| %>
+     <tr>
+       <td><a href="/stores/<%= store.id() %>"><%= store.name() %></a></td>
+     </tr>
+   <% end %>
+   </tbody>
+ </table>
 
 <% end %>
 
