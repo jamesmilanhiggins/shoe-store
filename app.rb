@@ -30,7 +30,15 @@ delete "/stores/:id" do
   store.destroy
   redirect "/stores"
 end
-# patch ""
+
+patch "/stores/:id" do
+  store_id = params["id"].to_i
+  store = Store.find(store_id)
+  name = params["name"]
+  store.update({name: name})
+  redirect "/stores/#{store_id}"
+end
+
 
 # delete "/stores/:id" do
 #   store_id = params["id"].to_i
@@ -65,4 +73,12 @@ delete "/brands/:id" do
   brand = Brand.find(brand_id)
   brand.destroy
   redirect "/brands"
+end
+
+patch "/brands/:id" do
+  brand_id = params["id"].to_i
+  brand = Brand.find(brand_id)
+  name = params["name"]
+  brand.update({name: name})
+  redirect "/brands/#{brand_id}"
 end
