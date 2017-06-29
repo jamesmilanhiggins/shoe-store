@@ -27,6 +27,14 @@ Examples: Chrome, Safari
 Ruby
 Bundler
 
+## Database Setup Instructions
+
+* _If Postgres is not installed on your computer, follow these instructions https://www.learnhowtoprogram.com/ruby/ruby-database-basics/installing-postgres-7fb0cff7-a0f5-4b61-a0db-8a928b9f67ef_
+* _run $postgres in your terminal window and leave it running_
+* _Run $bundle_
+* _In another terminal window, run $rake db:create_
+* _run $rake db:migrate_
+* _run $rake db:test:prepare_
 
 ## Setup/Installation Requirements
 * _Set up a production database and a development database in SQL (see instructions below)_
@@ -34,14 +42,6 @@ Bundler
 * _Run $bundle_
 * _Run $ruby app.rb_
 * _Type localhost:4567 in a browser window to view application_
-
-## Database Setup Instructions
-
-* _If Postgres is not installed on your computer, follow these instructions https://www.learnhowtoprogram.com/ruby/ruby-database-basics/installing-postgres-7fb0cff7-a0f5-4b61-a0db-8a928b9f67ef_
-* _run $postgres in your terminal window and leave it running_
-* _In another terminal window, run $rake db:create_
-* _run $rake db:migrate_
-* _run $rake db:test:prepare_
 
 
 ## Known Bugs
